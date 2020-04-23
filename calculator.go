@@ -44,13 +44,15 @@ func (c calc) operate(input string, operator string) (int, error) {
 	}
 }
 
-func readInput() string {
+//ReadInput lee una entrada
+func ReadInput() string {
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Scan()
 	return scanner.Text()
 }
 
-func processResult(input string, operator string) {
+//ProcessResult usa los datos de la entrada y los procesa
+func ProcessResult(input string, operator string) {
 	c := calc{}
 	value, err := c.operate(input, operator)
 	if err != nil {
